@@ -1,0 +1,2 @@
+pgrep -f <process name> | awk '{print kill -9  }'
+##ps -aux | grep "sudo tail", find pid, sudo kill pid

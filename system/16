@@ -1,0 +1,10 @@
+crontab
+existing shedules: sudo crontab -l
+edit: sudo crontab -e
+example: 0 1 * * 5 /bin/execute/this/script.sh
+minute: 0
+of hour: 1
+of day of month: * (every day of month)
+of month: * (every month)
+and weekday: 5 (=Friday)
+man crontab 8

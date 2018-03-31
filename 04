@@ -1,0 +1,16 @@
+#!bash
+
+if [ ! -e crontab.md5 ]
+then
+	md5sum crontab > ./crontab.md5
+fi
+
+if  (md5sum -c ./crontab.md5 | grep "FAILED")
+then
+	echo "Your file has been changed" | mail -s "WARNING" root | md5sum crontab > ./crontab.md5
+fi
+
+if !($(crontab -l | grep ./04))
+then
+	echo "0 0 * * * ./04" | crontab -
+fi

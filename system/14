@@ -1,0 +1,3 @@
+sudo tail -f /var/log/syslog &
+##then write command bg
+##then you could check by command jobs

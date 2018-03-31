@@ -1,0 +1,1 @@
+ls -l /var | grep drwx | awk '{printf($9"\t"$5)}'

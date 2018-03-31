@@ -1,0 +1,1 @@
+networksetup -getinfo ethernet | grep "IP address: " | cut -d ':' -f 2 | awk '{if ($1 != "none") print $1}'
